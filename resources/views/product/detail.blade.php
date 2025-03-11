@@ -10,7 +10,12 @@
             <div class="col-4">
                 <h5 class="card-title">{{$viewData["product"]->getName()}}</h5>
                 <p class="card-text"> {{$viewData["product"]->getDescription()}}</p>
-                <a href="#" class="btn btn-primary">Cart</a>
+                <label for="">Quantity:</label>
+                <form method="POST" action="{{route("cart.add", $viewData["product"]->getId())}}">
+                    @csrf
+                    <input name="quantity" type="number" min="1"><br>
+                    <input value="Add to cart" type="submit" class="btn btn-primary">
+                </form>
             </div>
         </div>
     </div>
