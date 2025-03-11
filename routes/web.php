@@ -18,6 +18,7 @@ Route::get('/about', 'App\Http\Controllers\HomeController@about')->name('home.ab
 Route::get('/products', 'App\Http\Controllers\ProductController@index')->name('product.index');
 Route::get('/products/{id}', 'App\Http\Controllers\ProductController@detail')->name('product.detail');
 Route::get('/cart', 'App\Http\Controllers\CartController@index')->name('cart.index');
+Route::post('/cart/add/{id}', 'App\Http\Controllers\CartController@add')->name('cart.add');
 
 Route::middleware('admin')->group(function (){
     Route::get('/admin', 'App\Http\Controllers\AdminController@index')->name('admin.index');
