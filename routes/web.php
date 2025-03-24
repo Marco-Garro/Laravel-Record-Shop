@@ -19,6 +19,8 @@ Route::get('/products', 'App\Http\Controllers\ProductController@index')->name('p
 Route::get('/products/{id}', 'App\Http\Controllers\ProductController@detail')->name('product.detail');
 Route::get('/cart', 'App\Http\Controllers\CartController@index')->name('cart.index');
 Route::post('/cart/add/{id}', 'App\Http\Controllers\CartController@add')->name('cart.add');
+Route::delete('/cart/remove/{id}', 'App\Http\Controllers\CartController@removeProduct')->name('cart.removeProduct');
+Route::delete('/cart/empty', 'App\Http\Controllers\CartController@emptyCart')->name('cart.emptyCart');
 
 Route::middleware('admin')->group(function (){
     Route::get('/admin', 'App\Http\Controllers\AdminController@index')->name('admin.index');

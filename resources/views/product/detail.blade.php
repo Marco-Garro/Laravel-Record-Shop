@@ -13,7 +13,7 @@
                 <label for="">Quantity:</label>
                 <form method="POST" action="{{route("cart.add", $viewData["product"]->getId())}}">
                     @csrf
-                    <input name="quantity" type="number" min="1"><br>
+                    <input value="1" name="quantity" type="number" min="1"><br>
                     <input value="Add to cart" type="submit" class="btn btn-primary">
                 </form>
             </div>
