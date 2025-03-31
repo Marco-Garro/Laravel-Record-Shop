@@ -39,4 +39,11 @@
             <input value="Empty Cart" type="submit" class="btn btn-danger">
         </div>
     </form>
+    <br>
+    <form method="POST" action="{{route("cart.buy")}}">
+        @csrf
+        <div class="d-flex justify-content-end">
+            <input value="Buy" type="submit" class="btn btn-primary">
+        </div>
+    </form>
 @endsection
