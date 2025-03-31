@@ -49,4 +49,17 @@ class Product extends Model
     {
         $this->price = $price;
     }
+
+    public function items()
+    {
+        return $this->hasMany(Item::class);
+    }
+    public function getItems()
+    {
+        return $this->items;
+    }
+    public function setItems($items)
+    {
+        $this->items = $items;
+    }
 }
