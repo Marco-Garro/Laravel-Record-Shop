@@ -22,6 +22,7 @@
           <a class="nav-link active" href="{{route("home.index")}}">Home</a>
           <a class="nav-link active" href="{{route("product.index")}}">Products</a>
           <a class="nav-link active" href="{{route("cart.index")}}">Cart<i class="bi bi-cart"></i></a>
+          <a class="nav-link active" href="{{route("cart.orders")}}">Orders<i class="bi bi-cart"></i></a>
           <a class="nav-link active" href="{{route("home.about")}}">About</a>
           <div class="vr bg-white mx-2 d-none d-lg-block"></div>
           @guest
