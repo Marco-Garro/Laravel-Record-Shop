@@ -57,4 +57,8 @@ class Order extends Model
     {
         $this->items = $items;
     }
+    public function getCreatedAt()
+    {
+        return $this->created_at;
+    }
 }
